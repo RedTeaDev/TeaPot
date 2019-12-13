@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from itertools import cycle
 
-bot = commands.Bot(command_prefix='/teapot')
+bot = commands.Bot(command_prefix='/teapot ')
 status = cycle(['/TeaPot ', 'redtea.red'])
 
 
@@ -32,8 +32,11 @@ async def kick(ctx, member : discord.Member, *, reason=None):
 
 @bot.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
-    await member.ban(reason=reason)
-    await ctx.send(f'{member} has been Banned!')
+    try:
+        await member.ban(reason=reason)
+        await ctx.send(f'{member} has been Banned!')
+    except Exception as failban:
+        await ctx.send("Fail to ban: Missing Permissions ")
 
 @tasks.loop(seconds=10)
 async def status():
