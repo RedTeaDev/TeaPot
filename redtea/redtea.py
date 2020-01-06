@@ -40,27 +40,25 @@ def command():
 
 def platform():
     import sys
-    print(sys.platform())
-    return
+    return sys.platform
 
 
 def random_hax(mix_rdx):
     import secrets
-    print(secrets.token_hex(mix_rdx))
-    return
+    haxreturn = secrets.token_hex(mix_rdx)
+    return  haxreturn
 
 
 def random_url(url_rdu):
     import secrets
     answer_rdu = url_rdu + secrets.token_urlsafe()
-    print(answer_rdu)
-    return
+    return answer_rdu
 
 
 def random_plus(mix_rdp):
     import secrets
-    print(secrets.randbelow(mix_rdp))
-    return
+    rp = secrets.randbelow(mix_rdp)
+    return rp
 
 
 def random(max_rd, min_rd):
@@ -77,15 +75,13 @@ def ip():
     import socket
     host_name = socket.gethostname()
     localNetwork = socket.gethostbyname(host_name)
-    print(localNetwork)
-    return
+    return localNetwork
 
 
 def hostname():
     import socket
     syshostname = socket.gethostname()
-    print(syshostname)
-    return
+    return syshostname
 
 
 def stop():
@@ -106,22 +102,20 @@ def time():
 
 def tick():
     import time
-    ticks = time.time()
-    print(ticks)
-    return
+    ticks: float = time.time()
+    return ticks
 
 
 def path():
     import sys
-    print(sys.path)
-    return
+    return sys.path
 
 
 def calender(year, month):
     import calendar
     calendar.setfirstweekday(firstweekday=6)
-    print(calendar.month(year, month))
-    return
+    calendar = (calendar.month(year, month))
+    return calendar
 
 
 def sleep(sleep_time):
@@ -154,31 +148,25 @@ def special_thanks():
 
 def domain2ip(url):
     import socket
-    Forward_query_get_ip = socket.gethostbyname(url)
-    Reverse_query_get_ip = socket.getaddrinfo(Forward_query_get_ip, None)
-    print("*----------------------------------*")
-    print("DNS Forward query:")
-    print(Forward_query_get_ip)
-    print("DNS Reverse query:")
-    print(Reverse_query_get_ip)
-    print("*----------------------------------*")
-    return
+    Forward_query_get_ip: str = socket.gethostbyname(url)
+    return Forward_query_get_ip
 
 
 def version():
-    print("0.3")
-    return
+    ver = '0.3'
+    return ver
 
 
 def file_print(name, mode, data):
     file = open(name, mode)
     file.write(data)
     file.close()
+    return
 
 
 def redtea():
     import time
-    print("""
+    logo = ("""
 MMMMMMMMMMMMMMMMMMMWXOxoclkNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMWXd;..  ,OWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNX0xlllodk0NWMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMW0:.... .xNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx'     .,o0NMMMMMMMMMMMMMMMMMMM
@@ -226,8 +214,7 @@ MMMMMMMMMMMMMN0kOKXXNNWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWNNX
 
                                 Powered By RedTea
 """)
-    time.sleep(5)
-    return
+    return logo
 
 
 def ThreadSpamer(how_much):  # WARNING: DO NOT OPEN TOO MANY THREAD,IT WILL CRASH YOUR PC!!!!!

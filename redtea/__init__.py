@@ -1,1 +1,1 @@
-# Import this model by " import redtea.redtea "!
+# Import this model by " from redtea import redtea "!
