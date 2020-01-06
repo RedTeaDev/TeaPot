@@ -2,13 +2,13 @@ import discord
 from discord.ext import commands, tasks
 from itertools import cycle
 
-bot = commands.Bot(command_prefix='/teapot')
+bot = commands.Bot(command_prefix='/teapot ')
 status = cycle(['/TeaPot ', 'redtea.red'])
 
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game('Starting..'))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game('/teapot | redtea.red'))
     print("Bot is ready.")
 
 
@@ -32,14 +32,21 @@ async def kick(ctx, member : discord.Member, *, reason=None):
 
 @bot.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
-    await member.ban(reason=reason)
-    await ctx.send(f'{member} has been Banned!')
+    try:
+        await member.ban(reason=reason)
+        await ctx.send(f'{member} has been Banned!')
+    except Exception as failban:
+        await ctx.send("Failed to ban: Missing Permissions ")
 
 @tasks.loop(seconds=10)
 async def status():
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(next(status)))
 
 try:
-    bot.run('replace_here')
+    from configparser import ConfigParser
+    parser = ConfigParser()
+    parser.read('Config.ini')
+    token = parser.get('Main', 'Token')
+    bot.run(token)
 except Exception as loginFail:
     print("Error:Login fail, please check the Token!")
