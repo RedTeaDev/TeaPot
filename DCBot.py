@@ -9,12 +9,16 @@ status = cycle(['/TeaPot ', 'redtea.red'])
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game('/teapot | redtea.red'))
-    print("Bot is ready.")
+    print("Bot is Online.")
 
 
 @bot.event
 async def on_member_join(member):
     print(f'{member} has joined a server.')
+ 
+@bot.event
+async def on_member_remove(member):
+    print(f'{member} has leaved a server.')
 
 
 @bot.command()
@@ -27,16 +31,24 @@ async def clear(ctx, amount=5):
 
 @bot.command()
 async def kick(ctx, member : discord.Member, *, reason=None):
-    await member.kick(reason=reason)
-    await ctx.send(f'{member} has been kicked!')
+    try:
+        await member.kick(reason=reason)
+        await ctx.send(f'{member} has been kicked!')
+        print(f'{member} has been kicked!')
+    except Exception as failban:
+        await ctx.send("Failed to ban: Missing Permissions ")
 
 @bot.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
     try:
         await member.ban(reason=reason)
         await ctx.send(f'{member} has been Banned!')
+        print(f'{member} has been Banned!')
     except Exception as failban:
         await ctx.send("Failed to ban: Missing Permissions ")
+@bot.command()
+async def ver(ctx):
+    await ctx.send(" Powered By RedTea | GitHub: https://github.com/lRedTeal/TeaPot " )
 
 @tasks.loop(seconds=10)
 async def status():
@@ -49,4 +61,4 @@ try:
     token = parser.get('Main', 'Token')
     bot.run(token)
 except Exception as loginFail:
-    print("Error:Login fail, please check the Token!")
+    print("Error:Login fail, please check the Token! Make Sure you have Run Setup.py once time!")
