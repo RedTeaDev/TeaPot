@@ -15,7 +15,8 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     print(f'{member} has joined a server.')
- 
+
+
 @bot.event
 async def on_member_remove(member):
     print(f'{member} has leaved a server.')
@@ -23,14 +24,16 @@ async def on_member_remove(member):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send(f'Pong! {round(bot.latency * 1000)} ms') #ping
+    await ctx.send(f'Pong! {round(bot.latency * 1000)} ms')  # ping
+
 
 @bot.command()
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
+
 @bot.command()
-async def kick(ctx, member : discord.Member, *, reason=None):
+async def kick(ctx, member: discord.Member, *, reason=None):
     try:
         await member.kick(reason=reason)
         await ctx.send(f'{member} has been kicked!')
@@ -38,27 +41,41 @@ async def kick(ctx, member : discord.Member, *, reason=None):
     except Exception as failban:
         await ctx.send("Failed to ban: Missing Permissions ")
 
+
 @bot.command()
-async def ban(ctx, member : discord.Member, *, reason=None):
+async def ban(ctx, member: discord.Member, *, reason=None):
     try:
         await member.ban(reason=reason)
         await ctx.send(f'{member} has been Banned!')
         print(f'{member} has been Banned!')
     except Exception as failban:
         await ctx.send("Failed to ban: Missing Permissions ")
+
+
 @bot.command()
 async def ver(ctx):
-    await ctx.send(" Powered By RedTea | GitHub: https://github.com/lRedTeal/TeaPot " )
+    await ctx.send(" By RedTea | GitHub: https://github.com/lRedTeal/TeaPot ")
+    await ctx.send(" Code w Python >3 with Discord.py ")
+
+
+@bot.command()
+async def admin(ctx):
+    await ctx.send("You don't have permission to perform this command!")
+
 
 @tasks.loop(seconds=10)
 async def status():
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(next(status)))
 
+
 try:
     from configparser import ConfigParser
+
     parser = ConfigParser()
     parser.read('Config.ini')
     token = parser.get('Main', 'Token')
     bot.run(token)
 except Exception as loginFail:
     print("Error:Login fail, please check the Token! Make Sure you have Run Setup.py once time!")
+
+# Gittest
