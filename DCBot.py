@@ -3,11 +3,12 @@ import discord
 from discord.ext import commands, tasks
 from itertools import cycle
 import logging
+from discord.ext import commands
 from redtea import redtea
 import time
 
 # noinspection PyArgumentList
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s | %(name)-5s  | %(levelname)-8s | Thread: %(thread)-5s | %(message)s',
                     datefmt='[%m-%d %H:%M]',
                     handlers=[
@@ -45,7 +46,17 @@ async def on_member_remove(member):
 
 @bot.event
 async def on_message(message):
-    print_info(f'{message}')
+    print_debug(f'{message}')
+
+
+@bot.event
+async def on_message(message):
+    guild = message.guild
+    if guild:
+        path = "logs/{}.txt".format(guild.id)
+        with open(path, 'a+') as f:
+            print("{0.author.name} : {0.content}".format(message), file=f)
+    await bot.process_commands(message)
 
 
 @bot.command()

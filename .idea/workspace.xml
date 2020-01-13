@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DCBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCBot.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +15,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UYr7BNiOXrcP1o0KhvhP8JBu8H" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/DCBot.py" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -21,17 +30,17 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -52,7 +61,24 @@
       <workItem from="1576907534130" duration="1084000" />
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
+      <workItem from="1578819932402" duration="6379000" />
+      <workItem from="1578889640224" duration="10462000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1578890381391</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578890381391</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added Massage logger">
+      <created>1578894073828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578894073828</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -71,8 +97,55 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <MESSAGE value="added Massage logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Massage logger" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="571" y="27" key="CommitChangelistDialog2" timestamp="1578894073155">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="571" y="27" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578894073155" />
+    <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1345" y="289" key="FileChooserDialogImpl/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907031198" />
+    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578910506301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
+    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578910506301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
+    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578910506301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
+    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578910506301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1578907036946">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907036946" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578894082614">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578894082614" />
+    <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="626" y="344" key="com.intellij.ide.util.TipDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578889688582" />
+    <state x="640" y="373" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1578907035841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="373" key="org.intellij.images.editor.actions.BackgroundImageDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907035841" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1576908439241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TeaPot$main.coverage" NAME="3.7 Coverage Results" MODIFIED="1575548630194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578910506291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
