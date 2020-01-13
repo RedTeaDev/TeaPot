@@ -6,10 +6,11 @@ try:
     config = ConfigParser()
 
     config['Main'] = {
-        'Token': tokenget
+        'Token': tokenget,
+        'SaveFile': 'false'
     }
     with open('./config.ini', 'w') as file:
-       print("[*] Writeing config to ./config.ini ....")
+       print("[*] Writing config to ./config.ini ....")
        redtea.sleep(1.55)
        config.write(file)
        print("[*] Susses build Config.ini!")

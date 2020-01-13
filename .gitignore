@@ -106,5 +106,5 @@ venv.bak/
 # Hide Token
 Config.ini
 
-#pychream
+#pycharm
 .idea

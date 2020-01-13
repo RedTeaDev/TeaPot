@@ -1,6 +1,25 @@
+from datetime import datetime
 import discord
 from discord.ext import commands, tasks
 from itertools import cycle
+import logging
+from redtea import redtea
+import time
+
+# noinspection PyArgumentList
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s | %(name)-5s  | %(levelname)-8s | Thread: %(thread)-5s | %(message)s',
+                    datefmt='[%m-%d %H:%M]',
+                    handlers=[
+                        logging.FileHandler(
+                            'logs/bot.log'.format(datetime.now().strftime('%Y_%m_%d_%H_%M_%S')), 'w',
+                            'utf-8'), ])
+# defind logger
+print_debug = logging.debug
+print_info = logging.info
+print_warning = logging.warning
+print_error = logging.error
+print_critical = logging.critical
 
 bot = commands.Bot(command_prefix='/teapot ')
 status = cycle(['/TeaPot ', 'redtea.red'])
@@ -14,12 +33,19 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    print(f'{member} has joined a server.')
+    print(f'{member} joined the server.')
+    print(f'{member} joined the server.')
 
 
 @bot.event
 async def on_member_remove(member):
-    print(f'{member} has leaved a server.')
+    print(f'{member} left the server.')
+    print_info(f'{member} left the server.')
+
+
+@bot.event
+async def on_message(message):
+    print_info(f'{message}')
 
 
 @bot.command()
@@ -77,5 +103,3 @@ try:
     bot.run(token)
 except Exception as loginFail:
     print("Error:Login fail, please check the Token! Make Sure you have Run Setup.py once time!")
-
-# Gittest
