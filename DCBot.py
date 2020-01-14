@@ -99,7 +99,7 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 async def ver(ctx):
     await ctx.send(" By RedTea | GitHub: https://github.com/lRedTeal/TeaPot ")
     await ctx.send(" Code w/ Python <3 with Discord.py API ")
-    await ctx.send(" Build-03_DEBUG | RedTeaPackage: " + redtea.version() + " | https://forum.redtea.red")
+    await ctx.send(" Build-03_DEMO | RedTeaPackage: " + redtea.version() + " | https://forum.redtea.red")
 
 
 @bot.command()
@@ -169,6 +169,16 @@ async def play(ctx, url: str):
     nname = name.rsplit("-", 2)
     await ctx.send(f"Playing: {nname}")
     print_info(f"playing: {nname}")
+
+@bot.command(pass_context=True)
+async def stop(ctx):
+    voice = get(bot.voice_clients, guild=ctx.guild)
+    if voice and voice.is_playing():
+        print_info("Stop music")
+        voice.stop()
+        await ctx.send("Music Stopped")
+    else:
+        await ctx.send("Music not Playing, Failed pause...")
 
 @bot.command()
 async def np(ctx):
