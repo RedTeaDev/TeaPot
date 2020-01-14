@@ -1,9 +1,12 @@
+import os
 from datetime import datetime
 import discord
 from discord.ext import commands, tasks
 from itertools import cycle
 import logging
 from discord.ext import commands
+from discord.utils import get
+import youtube_dl
 from redtea import redtea
 import time
 
@@ -99,6 +102,63 @@ async def ver(ctx):
 @bot.command()
 async def admin(ctx):
     await ctx.send("You don't have permission to perform this command!")
+
+
+@bot.command()
+async def join(ctx):
+    channel = ctx.author.voice.channel
+    await channel.connect()
+    await ctx.send("TeaPot Has join" + channel)
+
+
+@bot.command()
+async def leave(ctx):
+    await ctx.voice_client.disconnect()
+
+
+@bot.command(pass_context=True, aliases=['p'])
+# You might have to set FFMPEG to system path!
+async def play(ctx, url: str):
+    song = os.path.isfile("song.mp3")
+    try:
+        if song:
+            os.remove("song.mp3")
+            print_info("Removed old song file")
+    except PermissionError:
+        print_error("Trying to delete song file,but it's being played!")
+        await ctx.send("Error: Music playing")
+        return
+
+    print_info("Getting everything ready now")
+
+    voice = get(bot.voice_clients, guild=ctx.guild)
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
+    }
+
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        print_info("Downloading audio now...")
+        ydl.download([url])
+
+    for file in os.listdir("./"):
+        if file.endswith(".mp3"):
+            name = file
+            print_info("Renamed file")
+            os.rename(file, "song.mp3")
+
+    voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: print(f"{name} has finished playing"))
+    voice.source = discord.PCMVolumeTransformer(voice.source)
+    voice.source.volume = 0.20
+
+    nname = name.rsplit("-", 2)
+    await ctx.send(f"Playing: {nname}")
+    print_info(f"playing: {nname}")
+
 
 @tasks.loop(seconds=10)
 async def status():

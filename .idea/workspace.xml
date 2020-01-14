@@ -4,6 +4,7 @@
     <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DCBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="17943000" />
+      <workItem from="1578889640224" duration="23741000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -89,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578912985282</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update Massage Logger and Event Logger">
+      <created>1578967250736</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578967250736</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,30 +123,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update Massage Logger and Event Logger" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="571" y="27" key="CommitChangelistDialog2" timestamp="1578912984715">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578972263617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="27" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578912984715" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578972263617" />
+    <state x="571" y="27" key="CommitChangelistDialog2" timestamp="1578967250175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="571" y="27" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578967250175" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1345" y="289" key="FileChooserDialogImpl/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907031198" />
-    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578924743637">
+    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578975314688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
-    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578924743637">
+    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578975314688" />
+    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578975314688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
-    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578924743637">
+    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578975314688" />
+    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578975314688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
-    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578924743637">
+    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578975314688" />
+    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578975314688">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
+    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578975314688" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1578925126685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -147,10 +159,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578921216439" />
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578912993882">
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578967262351">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578912993882" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578967262351" />
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -162,6 +174,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TeaPot$main.coverage" NAME="3.7 Coverage Results" MODIFIED="1575548630194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578924743618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578975314683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
