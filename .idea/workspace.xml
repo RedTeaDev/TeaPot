@@ -67,7 +67,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="40800000" />
+      <workItem from="1578889640224" duration="42612000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578987561491</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update Command: (queue) &#10;Fixed Memory Leak&#10;Speed up Music Loader">
+      <created>1578994243100</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578994243100</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +182,8 @@
     <MESSAGE value="Allow you to stop the music" />
     <MESSAGE value="Fix issue" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="Update Command: (queue) &#10;Fixed Memory Leak&#10;Speed up Music Loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Command: (queue) &#10;Fixed Memory Leak&#10;Speed up Music Loader" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578972263617">
@@ -186,10 +194,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578977783806" />
-    <state x="1050" y="36" key="CommitChangelistDialog2" timestamp="1578987560960">
+    <state x="1050" y="36" key="CommitChangelistDialog2" timestamp="1578994242534">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1050" y="36" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578987560960" />
+    <state x="1050" y="36" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578994242534" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -222,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578921216439" />
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578976219365">
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578994257763">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578976219365" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578994257763" />
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

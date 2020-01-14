@@ -110,9 +110,12 @@ async def admin(ctx):
 
 @bot.command()
 async def join(ctx):
-    channel = ctx.author.voice.channel
-    await channel.connect()
-    await ctx.send("TeaPot has joined " + channel)
+    try:
+        channel = ctx.author.voice.channel
+        await channel.connect()
+        await ctx.send("TeaPot has joined " + channel)
+    except:
+        await ctx.send("TeaPot Already connected to a voice channel!")
 
 
 @bot.command()
@@ -168,7 +171,7 @@ async def play(ctx, url: str):
             print_info("Removed old song file")
     except PermissionError:
         print_error("Trying to delete song file, but it's being played!")
-        await ctx.send("Error: Music playing, we do not support queue yet.")
+        await ctx.send("Error: Music playing, use /teapot queue [Link]")
         return
 
     Queue_infile = os.path.isdir("./Queue")
