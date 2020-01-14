@@ -8,7 +8,15 @@ try:
 
     config['Main'] = {
         'Token': input,
+        'storage_type': 'flatfile',
         'SaveFile': 'false'
+    }
+
+    config['MySQL'] = {
+        'host': 'www.mydomain.com',
+        'database': 'my_database',
+        'user': 'root',
+        'password': 'root'
     }
     with open('./config.ini', 'w') as file:
         print("[*] Writing config to ./config.ini ....")

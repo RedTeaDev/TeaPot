@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teapot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Teapot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="62517000" />
+      <workItem from="1578889640224" duration="63994000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579019543891</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add CODE_OF_CONDUCT.md">
+      <created>1579021564371</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1579021564371</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +277,10 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Notifications" timestamp="1579022489794">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579022489794" />
     <state x="779" y="175" key="#Python" timestamp="1579006216781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -294,38 +305,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578977783806" />
-    <state x="1050" y="12" key="CommitChangelistDialog2" timestamp="1579019543145">
+    <state x="442" y="12" width="1453" height="986" key="CommitChangelistDialog2" timestamp="1579021699195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1050" y="12" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019543145" />
-    <state x="198" y="80" key="DiffContextDialog" timestamp="1579019074837">
+    <state x="442" y="12" width="1453" height="986" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579021699195" />
+    <state x="198" y="80" key="DiffContextDialog" timestamp="1579021684736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="198" y="80" key="DiffContextDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019074837" />
+    <state x="198" y="80" key="DiffContextDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579021684736" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1345" y="289" key="FileChooserDialogImpl/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907031198" />
-    <state width="934" height="257" key="GridCell.Tab.0.bottom" timestamp="1579017159094">
+    <state width="934" height="257" key="GridCell.Tab.0.bottom" timestamp="1579023158546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="257" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
-    <state width="934" height="257" key="GridCell.Tab.0.center" timestamp="1579017159094">
+    <state width="934" height="257" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579023158546" />
+    <state width="934" height="257" key="GridCell.Tab.0.center" timestamp="1579023158546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="257" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
-    <state width="934" height="257" key="GridCell.Tab.0.left" timestamp="1579017159094">
+    <state width="934" height="257" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579023158546" />
+    <state width="934" height="257" key="GridCell.Tab.0.left" timestamp="1579023158546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="257" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
-    <state width="934" height="257" key="GridCell.Tab.0.right" timestamp="1579017159094">
+    <state width="934" height="257" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579023158546" />
+    <state width="934" height="257" key="GridCell.Tab.0.right" timestamp="1579023158546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="257" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
-    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1578925126685">
+    <state width="934" height="257" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579023158546" />
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1579022444577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="540" y="254" key="IDE.errors.dialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578925126685" />
+    <state x="540" y="254" key="IDE.errors.dialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579022444577" />
     <state x="734" y="145" key="RollbackChangesDialog" timestamp="1579019076018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -334,10 +345,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="903" y="188" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579010799691" />
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1579019547446">
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1579021568610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019547446" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579021568610" />
+    <state x="715" y="364" key="cloudConfig.SelfSettingsDialog" timestamp="1579022459667">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="364" key="cloudConfig.SelfSettingsDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579022459667" />
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -350,9 +365,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="373" key="org.intellij.images.editor.actions.BackgroundImageDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907035841" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1579023059211">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579023059211" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TeaPot$main.coverage" NAME="3.7 Coverage Results" MODIFIED="1575548630194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1579017068451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1579023158539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
