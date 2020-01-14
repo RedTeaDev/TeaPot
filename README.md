@@ -38,7 +38,7 @@ Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of 
 ## Authors
 
 * RedTea  [ https://forum.redtea.red ]
-* ColaIan [ https://pydrox.com/ ]
+* ColaIan [ https://forum.supercolatyphoon.com ]
 
 ## License
 
