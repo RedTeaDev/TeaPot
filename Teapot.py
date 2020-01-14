@@ -163,13 +163,14 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 
 @bot.command(aliases=['version', 'about', 'info', 'data'])
 async def ver(ctx):
-    await ctx.send(" By RedTea | GitHub: https://github.com/lRedTeal/TeaPot ")
+    await ctx.send(" By RedTea, ColaIan | GitHub: https://github.com/lRedTeal/TeaPot ")
     await ctx.send(" Code w/ Python <3 with Discord.py API ")
     await ctx.send(" Build-03_pre-release | RedTeaPackage: " + redtea.version() + " | https://forum.redtea.red")
 
 
 @bot.command()
 async def admin(ctx):
+    # Not Done Yet.
     await ctx.send("You don't have permission to perform this command!")
 
 
