@@ -1,17 +1,59 @@
-import os
-from datetime import datetime
-import discord
-from discord.ext import commands, tasks
-from itertools import cycle
 import logging
-from discord.ext import commands
-from discord.utils import get
-import youtube_dl
-from redtea import redtea
-import time
+import os
 import shutil
+from configparser import ConfigParser
+from datetime import datetime
+from itertools import cycle
 
-# noinspection PyArgumentList
+import discord
+import mysql.connector
+import youtube_dl
+from discord.ext import commands
+from discord.ext import tasks
+from discord.utils import get
+
+from redtea import redtea
+
+# Check if config exists
+if not os.path.isfile('config.ini'):
+    print("Unable to find configuration file (config.ini). Running setup.py...")
+    os.system("python setup.py")
+    quit()
+
+# Read config from config.ini
+try:
+    config = ConfigParser()
+    config.read('config.ini')
+    bot_token = config.get('Main', 'token')
+    storage_type = config.get('Main', 'storage_type')
+    if storage_type == "mysql":
+        db_host = config.get('MySQL', 'host')
+        db_database = config.get('MySQL', 'database')
+        db_user = config.get('MySQL', 'user')
+        db_password = config.get('MySQL', 'password')
+    else:
+        storage_type = "flatfile"
+except Exception:
+    print("Configuration error. Please check your configuration file!")
+    quit()
+
+if storage_type == "mysql":
+    try:
+        database = mysql.connector.connect(
+            host=db_host,
+            database=db_database,
+            user=db_user,
+            passwd=db_password
+        )
+        db = database.cursor(buffered=True)
+        print(database)
+        # db.execute('DROP TABLE IF EXISTS `servers`')
+        db.execute('CREATE TABLE IF NOT EXISTS `servers` (`id` BIGINT, `name` TINYTEXT)')
+    except Exception as error:
+        print("Unable to connect to database. Aborting startup...\n" + str(error))
+        quit()
+
+# Logger Configuration
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s | %(name)-5s  | %(levelname)-8s | Thread: %(thread)-5s | %(message)s',
                     datefmt='[%m-%d %H:%M]',
@@ -32,20 +74,36 @@ status = cycle(['/teapot ', 'redtea.red'])
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game('/teapot | redtea.red'))
-    print("Bot is Online.")
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game('/teapot help | redtea.red'))
+
+    if storage_type == "mysql":
+        for guild in bot.guilds:
+            db.execute("SELECT * FROM `servers` WHERE id = '" + str(guild.id) + "'")
+            if db.rowcount == 0:
+                db.execute("INSERT INTO `servers`(id, name) VALUES(%s, %s)", (guild.id, guild.name))
+                database.commit()
+    elif storage_type == "flatfile":
+        print(
+            "[!] You are currently using flatfile as your storage type. It's recommended for you to use MySQL Database")
+
+    print("Successfully connected to Discord.")
+
+    #     print(guild.id)
+    #     server_ids.append(guild.id)
+    # print(server_ids)
+    # print(bot.guilds)
 
 
 @bot.event
 async def on_member_join(member):
-    print(f'{member} joined the server.')
-    print(f'{member} joined the server.')
+    print(f'{member} joined ' + member.server.name + ".")
+    print_info(f'{member} joined the server.' + member.server.name + ".")
 
 
 @bot.event
 async def on_member_remove(member):
-    print(f'{member} left the server.')
-    print_info(f'{member} left the server.')
+    print(f'{member} left ' + member.server.name + ".")
+    print_info(f'{member} left ' + member.server.name + ".")
 
 
 @bot.event
@@ -71,7 +129,7 @@ async def ping(ctx):
     await ctx.send(f'Pong! {round(bot.latency * 1000)} ms')  # ping
 
 
-@bot.command()
+@bot.command(aliases=['purge', 'remove', 'cls'])
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
@@ -96,7 +154,7 @@ async def ban(ctx, member: discord.Member, *, reason=None):
         await ctx.send("Failed to ban:" + str(failban))
 
 
-@bot.command()
+@bot.command(aliases=['version', 'about', 'info', 'data'])
 async def ver(ctx):
     await ctx.send(" By RedTea | GitHub: https://github.com/lRedTeal/TeaPot ")
     await ctx.send(" Code w/ Python <3 with Discord.py API ")
@@ -281,11 +339,7 @@ async def status():
 
 
 try:
-    from configparser import ConfigParser
-
-    parser = ConfigParser()
-    parser.read('Config.ini')
-    token = parser.get('Main', 'Token')
-    bot.run(token)
-except Exception as loginFail:
-    print("Error:Login fail, please check the Token! Make Sure you have Run Setup.py once time!")
+    bot.run(bot_token)
+except Exception as loginFailed:
+    print(
+        "[ERROR] Failed to connect to DiscordAPI. Please check your bot token! Make sure that you have run setup.py once!")

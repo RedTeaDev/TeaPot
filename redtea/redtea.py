@@ -1,8 +1,8 @@
 def help():
     print("""
-        Thanks For using RedTea Packages
+        Thanks For using RedTea Library
 
-        description: This is a Packages for my tools,Game,or something else
+        description: This is a package for my programs
 
         Website: https://www.redtea.red 
         
@@ -165,7 +165,6 @@ def file_print(name, mode, data):
 
 
 def redtea():
-    import time
     logo = ("""
 MMMMMMMMMMMMMMMMMMMWXOxoclkNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMWXd;..  ,OWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNX0xlllodk0NWMMMMMMMMMMMMMMMMMMMMM
