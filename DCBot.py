@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.DEBUG,
                         logging.FileHandler(
                             'logs/bot.log'.format(datetime.now().strftime('%Y_%m_%d_%H_%M_%S')), 'w',
                             'utf-8'), ])
-# defind logger
+# define logger
 print_debug = logging.debug
 print_info = logging.info
 print_warning = logging.warning
@@ -26,7 +26,7 @@ print_error = logging.error
 print_critical = logging.critical
 
 bot = commands.Bot(command_prefix='/teapot ')
-status = cycle(['/TeaPot ', 'redtea.red'])
+status = cycle(['/teapot ', 'redtea.red'])
 
 
 @bot.event
@@ -55,10 +55,13 @@ async def on_message(message):
 @bot.event
 async def on_message(message):
     guild = message.guild
-    if guild:
-        path = "logs/{}.txt".format(guild.id)
-        with open(path, 'a+') as f:
-            print("{0.author.name} : {0.content}".format(message), file=f)
+    try:
+        if guild:
+            path = "logs/{}.txt".format(guild.id)
+            with open(path, 'a+') as f:
+                print("{0.author.name} : {0.content}".format(message), file=f)
+    except Exception as ignore:
+        print_debug("ignore error...")
     await bot.process_commands(message)
 
 
@@ -86,8 +89,8 @@ async def kick(ctx, member: discord.Member, *, reason=None):
 async def ban(ctx, member: discord.Member, *, reason=None):
     try:
         await member.ban(reason=reason)
-        await ctx.send(f'{member} has been Banned!')
-        print(f'{member} has been Banned!')
+        await ctx.send(f'{member} has been banned!')
+        print(f'{member} has been banned!')
     except Exception as failban:
         await ctx.send("Failed to ban:" + str(failban))
 
@@ -95,8 +98,8 @@ async def ban(ctx, member: discord.Member, *, reason=None):
 @bot.command()
 async def ver(ctx):
     await ctx.send(" By RedTea | GitHub: https://github.com/lRedTeal/TeaPot ")
-    await ctx.send(" Code w Python >3 with Discord.py API ")
-    await ctx.send(" Build-03_DEBUG | RedTeaPackage: 0.3 | https://Forum.redtea.red")
+    await ctx.send(" Code w/ Python <3 with Discord.py API ")
+    await ctx.send(" Build-03_DEBUG | RedTeaPackage: " + redtea.version() + " | https://forum.redtea.red")
 
 
 @bot.command()
@@ -108,7 +111,7 @@ async def admin(ctx):
 async def join(ctx):
     channel = ctx.author.voice.channel
     await channel.connect()
-    await ctx.send("TeaPot Has join" + channel)
+    await ctx.send("TeaPot has joined " + channel)
 
 
 @bot.command()
@@ -119,14 +122,15 @@ async def leave(ctx):
 @bot.command(pass_context=True, aliases=['p'])
 # You might have to set FFMPEG to system path!
 async def play(ctx, url: str):
+    global nname
     song = os.path.isfile("song.mp3")
     try:
         if song:
             os.remove("song.mp3")
             print_info("Removed old song file")
     except PermissionError:
-        print_error("Trying to delete song file,but it's being played!")
-        await ctx.send("Error: Music playing,we are not support queue yet.")
+        print_error("Trying to delete song file, but it's being played!")
+        await ctx.send("Error: Music playing, we do not support queue yet.")
         return
 
     print_info("Getting everything ready now")
@@ -140,15 +144,18 @@ async def play(ctx, url: str):
             'preferredquality': '192',
         }],
     }
-
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        print_info("Downloading audio now...")
-        ydl.download([url])
+    try:
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            print_info("Downloading audio now...")
+            await ctx.send("Downloading... Please Wait...")
+            ydl.download([url])
+    except Exception as faildownload:
+        await ctx.send("Fail to download: " + str(faildownload))
 
     for file in os.listdir("./"):
         if file.endswith(".mp3"):
             name = file
-            print_info("Renamed Music file")
+            print_info("Renamed Audio file")
             os.rename(file, "song.mp3")
 
     voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: print(f"{name} has finished playing"))
@@ -159,6 +166,10 @@ async def play(ctx, url: str):
     await ctx.send(f"Playing: {nname}")
     print_info(f"playing: {nname}")
 
+@bot.command()
+async def np(ctx):
+    global nname
+    await ctx.send(f"Current Playing: {nname}")
 
 @tasks.loop(seconds=10)
 async def status():

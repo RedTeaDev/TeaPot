@@ -153,7 +153,7 @@ def domain2ip(url):
 
 
 def version():
-    ver = '0.3'
+    ver = '0.4'
     return ver
 
 
