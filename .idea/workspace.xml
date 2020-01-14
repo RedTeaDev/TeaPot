@@ -67,7 +67,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="31616000" />
+      <workItem from="1578889640224" duration="34103000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578982489754</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix issue">
+      <created>1578983831949</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578983831949</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +166,8 @@
     <MESSAGE value="Fix Grammar" />
     <MESSAGE value="add some Exception" />
     <MESSAGE value="Allow you to stop the music" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow you to stop the music" />
+    <MESSAGE value="Fix issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578972263617">
@@ -170,30 +178,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578977783806" />
-    <state x="1050" y="36" key="CommitChangelistDialog2" timestamp="1578982489061">
+    <state x="1050" y="36" key="CommitChangelistDialog2" timestamp="1578983831206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1050" y="36" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982489061" />
+    <state x="1050" y="36" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578983831206" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1345" y="289" key="FileChooserDialogImpl/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907031198" />
-    <state width="934" height="260" key="GridCell.Tab.0.bottom" timestamp="1578982820485">
+    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578987076747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982820485" />
-    <state width="934" height="260" key="GridCell.Tab.0.center" timestamp="1578982820485">
+    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578987076747" />
+    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578987076747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982820485" />
-    <state width="934" height="260" key="GridCell.Tab.0.left" timestamp="1578982820485">
+    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578987076747" />
+    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578987076747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982820485" />
-    <state width="934" height="260" key="GridCell.Tab.0.right" timestamp="1578982820485">
+    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578987076747" />
+    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578987076747">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="934" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578982820485" />
+    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578987076747" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1578925126685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -217,6 +225,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TeaPot$main.coverage" NAME="3.7 Coverage Results" MODIFIED="1575548630194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578982820480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578987076740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

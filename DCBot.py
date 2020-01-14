@@ -178,6 +178,7 @@ async def stop(ctx):
         voice.stop()
         await ctx.send("Music Stopped")
     else:
+        voice.stop()
         await ctx.send("Music not Playing, Failed to stop...")
 
 @bot.command()
