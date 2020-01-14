@@ -262,10 +262,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578977783806" />
-    <state x="1050" y="12" key="CommitChangelistDialog2" timestamp="1579017345344">
+    <state x="1050" y="12" key="CommitChangelistDialog2" timestamp="1579019126322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1050" y="12" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017345344" />
+    <state x="1050" y="12" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019126322" />
+    <state x="198" y="80" key="DiffContextDialog" timestamp="1579019074837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="198" y="80" key="DiffContextDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019074837" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -290,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="254" key="IDE.errors.dialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578925126685" />
-    <state x="734" y="145" key="RollbackChangesDialog" timestamp="1578990816283">
+    <state x="734" y="145" key="RollbackChangesDialog" timestamp="1579019076018">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="734" y="145" key="RollbackChangesDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578990816283" />
+    <state x="734" y="145" key="RollbackChangesDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019076018" />
     <state x="903" y="188" key="SettingsEditor" timestamp="1579010799691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
