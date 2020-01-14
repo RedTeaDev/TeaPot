@@ -3,16 +3,16 @@ import os
 import shutil
 from configparser import ConfigParser
 from datetime import datetime
-from itertools import cycle
 
 import discord
 import mysql.connector
 import youtube_dl
 from discord.ext import commands
-from discord.ext import tasks
 from discord.utils import get
 
 from redtea import redtea
+
+ready = 0
 
 # Check if config exists
 if not os.path.isfile('config.ini'):
@@ -61,6 +61,7 @@ logging.basicConfig(level=logging.DEBUG,
                         logging.FileHandler(
                             'logs/bot.log'.format(datetime.now().strftime('%Y_%m_%d_%H_%M_%S')), 'w',
                             'utf-8'), ])
+
 # define logger
 print_debug = logging.debug
 print_info = logging.info
@@ -69,23 +70,29 @@ print_error = logging.error
 print_critical = logging.critical
 
 bot = commands.Bot(command_prefix='/teapot ')
-status = cycle(['/teapot ', 'redtea.red'])
+
+
+# status = cycle(['/teapot ', 'redtea.red'])    [Not working]
 
 
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game('/teapot help | redtea.red'))
+    ready = 1
 
     if storage_type == "mysql":
         for guild in bot.guilds:
+            use_sql = True
             db.execute("SELECT * FROM `servers` WHERE id = '" + str(guild.id) + "'")
             if db.rowcount == 0:
                 db.execute("INSERT INTO `servers`(id, name) VALUES(%s, %s)", (guild.id, guild.name))
                 database.commit()
     elif storage_type == "flatfile":
+        use_sql = False
         print(
             "[!] You are currently using flatfile as your storage type. It's recommended for you to use MySQL Database")
-
+        print_warning(
+            "[!] You are currently using flatfile as your storage type. It's recommended for you to use MySQL Database")
     print("Successfully connected to Discord.")
 
     #     print(guild.id)
@@ -185,6 +192,7 @@ async def leave(ctx):
 # You might have to set FFMPEG to system path!
 async def play(ctx, url: str):
     global nname
+
     def check_queue():
         Queue_infile = os.path.isdir("./Queue")
         if Queue_infile is True:
@@ -192,7 +200,7 @@ async def play(ctx, url: str):
             length = len(os.listdir(DIR))
             still_q = length - 1
             try:
-                first_file = os.listdir(DIR) [0]
+                first_file = os.listdir(DIR)[0]
             except:
                 print_info("No more queued song(s)")
                 queues.clear()
@@ -219,7 +227,6 @@ async def play(ctx, url: str):
         else:
             queues.clear()
             print_info("No songs were queued..")
-
 
     song = os.path.isfile("song.mp3")
     try:
@@ -277,6 +284,7 @@ async def play(ctx, url: str):
     await ctx.send(f"Playing: {nname}")
     print_info(f"playing: {nname}")
 
+
 @bot.command(pass_context=True)
 async def stop(ctx):
     voice = get(bot.voice_clients, guild=ctx.guild)
@@ -290,10 +298,12 @@ async def stop(ctx):
         voice.stop()
         await ctx.send("Music not Playing, Failed to stop...")
 
+
 @bot.command()
 async def np(ctx):
     global nname
     await ctx.send(f"Current Playing: {nname}")
+
 
 @bot.command(pass_context=True)
 async def queue(ctx, url: str):
@@ -332,11 +342,6 @@ async def queue(ctx, url: str):
 
 
 queues = {}
-
-@tasks.loop(seconds=10)
-async def status():
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(next(status)))
-
 
 try:
     bot.run(bot_token)

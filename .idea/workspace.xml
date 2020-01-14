@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="Fix Import error">
+    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teapot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Teapot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +97,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="60474000" />
+      <workItem from="1578889640224" duration="62517000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -210,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579019144466</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add CODE_OF_CONDUCT.md">
+      <created>1579019543891</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1579019543891</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +263,8 @@
     <MESSAGE value="Add some Except" />
     <MESSAGE value="Added MySQL Support" />
     <MESSAGE value="Fix Import error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Import error" />
+    <MESSAGE value="Add CODE_OF_CONDUCT.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add CODE_OF_CONDUCT.md" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -285,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578977783806" />
-    <state x="1050" y="12" key="CommitChangelistDialog2" timestamp="1579019157227">
+    <state x="1050" y="12" key="CommitChangelistDialog2" timestamp="1579019543145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1050" y="12" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019157227" />
+    <state x="1050" y="12" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019543145" />
     <state x="198" y="80" key="DiffContextDialog" timestamp="1579019074837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -325,18 +334,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="903" y="188" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579010799691" />
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1579019167584">
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1579019547446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019167584" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019547446" />
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578889688582" />
-    <state x="758" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578990811278">
+    <state x="758" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579019829576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="758" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578990811278" />
+    <state x="758" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579019829576" />
     <state x="640" y="373" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1578907035841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
