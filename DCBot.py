@@ -75,8 +75,8 @@ async def kick(ctx, member: discord.Member, *, reason=None):
         await member.kick(reason=reason)
         await ctx.send(f'{member} has been kicked!')
         print(f'{member} has been kicked!')
-    except Exception as failban:
-        await ctx.send("Failed to ban: Missing Permissions ")
+    except Exception as failkick:
+        await ctx.send("Failed to ban:" + str(failkick))
 
 
 @bot.command()
@@ -86,19 +86,19 @@ async def ban(ctx, member: discord.Member, *, reason=None):
         await ctx.send(f'{member} has been Banned!')
         print(f'{member} has been Banned!')
     except Exception as failban:
-        await ctx.send("Failed to ban: Missing Permissions ")
+        await ctx.send("Failed to ban:" + str(failban))
 
 
 @bot.command()
 async def ver(ctx):
     await ctx.send(" By RedTea | GitHub: https://github.com/lRedTeal/TeaPot ")
-    await ctx.send(" Code w Python >3 with Discord.py ")
+    await ctx.send(" Code w Python >3 with Discord.py API ")
+    await ctx.send(" Build-03_DEBUG | RedTeaPackage: 0.3 | https://Forum.redtea.red")
 
 
 @bot.command()
 async def admin(ctx):
     await ctx.send("You don't have permission to perform this command!")
-
 
 @tasks.loop(seconds=10)
 async def status():

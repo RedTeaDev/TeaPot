@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DCBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCBot.py" afterDir="false" />
     </list>
@@ -12,6 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="RedTea &lt;redtea@redtea.red&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UYr7BNiOXrcP1o0KhvhP8JBu8H" />
@@ -30,7 +34,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -62,7 +66,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="10462000" />
+      <workItem from="1578889640224" duration="17943000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -78,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578894073828</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update Massage Logger and Event Logger">
+      <created>1578912985282</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578912985282</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,41 +111,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="added Massage logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Massage logger" />
+    <MESSAGE value="Update Massage Logger and Event Logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Massage Logger and Event Logger" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="571" y="27" key="CommitChangelistDialog2" timestamp="1578894073155">
+    <state x="571" y="27" key="CommitChangelistDialog2" timestamp="1578912984715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="27" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578894073155" />
+    <state x="571" y="27" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578912984715" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1345" y="289" key="FileChooserDialogImpl/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907031198" />
-    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578910506301">
+    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578924743637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
-    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578910506301">
+    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
+    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578924743637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
-    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578910506301">
+    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
+    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578924743637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
-    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578910506301">
+    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
+    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578924743637">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578910506301" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1578907036946">
+    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578924743637" />
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1578925126685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907036946" />
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578894082614">
+    <state x="540" y="254" key="IDE.errors.dialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578925126685" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1578921216439">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578894082614" />
+    <state x="461" y="162" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578921216439" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578912993882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578912993882" />
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -146,6 +162,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TeaPot$main.coverage" NAME="3.7 Coverage Results" MODIFIED="1575548630194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578910506291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578924743618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
