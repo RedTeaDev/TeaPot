@@ -9,3 +9,37 @@
 
 
 Discord Bot
+
+
+----
+
+### Installing
+
+#### Windows 
+
+```
+>pip install -r requirements.txt
+>python3 Teapot.py
+```
+
+
+#### Linux
+
+```
+>pip install -r requirements.txt
+>python3 Teapot.py
+```
+
+
+## Code of conduct
+
+Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+* RedTea  [ https://forum.redtea.red ]
+* ColaIan [ https://forum.supercolatyphoon.com ]
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
