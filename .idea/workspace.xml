@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="">
+    <list default="true" id="25b3beef-c2e9-440b-83ce-44926d097d9a" name="Default Changelist" comment="Added MySQL Support">
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/3_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/3_7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DCBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/DCBot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="ColaIan &lt;colaian.yt@gmail.com&gt;" />
+        <option value="ColaIan" />
         <option value="RedTea &lt;redtea@redtea.red&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectId" id="1UYr7BNiOXrcP1o0KhvhP8JBu8H" />
   <component name="ProjectViewState">
@@ -27,15 +52,21 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DCBot.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sean8\Desktop\Pycharm\--Project\TeaPot" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -67,7 +98,7 @@
       <workItem from="1577098378172" duration="445000" />
       <workItem from="1577113267359" duration="9000" />
       <workItem from="1578819932402" duration="6379000" />
-      <workItem from="1578889640224" duration="42612000" />
+      <workItem from="1578889640224" duration="59947000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1578890381391</created>
@@ -153,7 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578994243100</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add some Except">
+      <created>1578996833377</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578996833377</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added MySQL Support">
+      <created>1579017345956</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579017345956</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +218,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="test" />
     <MESSAGE value="added Massage logger" />
     <MESSAGE value="Update Massage Logger and Event Logger" />
@@ -183,41 +230,62 @@
     <MESSAGE value="Fix issue" />
     <MESSAGE value="Update" />
     <MESSAGE value="Update Command: (queue) &#10;Fixed Memory Leak&#10;Speed up Music Loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Command: (queue) &#10;Fixed Memory Leak&#10;Speed up Music Loader" />
+    <MESSAGE value="Add some Except" />
+    <MESSAGE value="Added MySQL Support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MySQL Support" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578972263617">
+    <state x="779" y="175" key="#Python" timestamp="1579006216781">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578972263617" />
+    <state x="779" y="175" key="#Python/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579006216781" />
+    <state x="552" y="178" key="#SQL_Dialects" timestamp="1579009182032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#SQL_Dialects/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579009182032" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579009224524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579009224524" />
+    <state x="712" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002986800">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="712" y="309" key="#com.intellij.fileTypes.FileTypeChooser/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579002986800" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579010884133">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579010884133" />
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1578977783806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578977783806" />
-    <state x="1050" y="36" key="CommitChangelistDialog2" timestamp="1578994242534">
+    <state x="1050" y="12" key="CommitChangelistDialog2" timestamp="1579017345344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1050" y="36" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578994242534" />
+    <state x="1050" y="12" key="CommitChangelistDialog2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017345344" />
     <state x="1345" y="289" key="FileChooserDialogImpl" timestamp="1578907031198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1345" y="289" key="FileChooserDialogImpl/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578907031198" />
-    <state width="935" height="260" key="GridCell.Tab.0.bottom" timestamp="1578993659702">
+    <state width="934" height="257" key="GridCell.Tab.0.bottom" timestamp="1579017159094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578993659702" />
-    <state width="935" height="260" key="GridCell.Tab.0.center" timestamp="1578993659702">
+    <state width="934" height="257" key="GridCell.Tab.0.bottom/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
+    <state width="934" height="257" key="GridCell.Tab.0.center" timestamp="1579017159094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578993659702" />
-    <state width="935" height="260" key="GridCell.Tab.0.left" timestamp="1578993659702">
+    <state width="934" height="257" key="GridCell.Tab.0.center/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
+    <state width="934" height="257" key="GridCell.Tab.0.left" timestamp="1579017159094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578993659702" />
-    <state width="935" height="260" key="GridCell.Tab.0.right" timestamp="1578993659702">
+    <state width="934" height="257" key="GridCell.Tab.0.left/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
+    <state width="934" height="257" key="GridCell.Tab.0.right" timestamp="1579017159094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="935" height="260" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578993659702" />
+    <state width="934" height="257" key="GridCell.Tab.0.right/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017159094" />
     <state x="540" y="254" key="IDE.errors.dialog" timestamp="1578925126685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,14 +294,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="734" y="145" key="RollbackChangesDialog/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578990816283" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1578921216439">
+    <state x="903" y="188" key="SettingsEditor" timestamp="1579010799691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578921216439" />
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1578994257763">
+    <state x="903" y="188" key="SettingsEditor/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579010799691" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2" timestamp="1579017348258">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1578994257763" />
+    <state x="552" y="249" width="816" height="627" key="Vcs.Push.Dialog.v2/98.-1080.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1579017348258" />
     <state x="626" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1578889688582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -249,6 +317,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TeaPot$main.coverage" NAME="3.7 Coverage Results" MODIFIED="1575548630194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1578993659696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TeaPot$3_7.coverage" NAME="3.7 Coverage Results" MODIFIED="1579017068451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
