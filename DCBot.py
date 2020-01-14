@@ -126,7 +126,7 @@ async def play(ctx, url: str):
             print_info("Removed old song file")
     except PermissionError:
         print_error("Trying to delete song file,but it's being played!")
-        await ctx.send("Error: Music playing")
+        await ctx.send("Error: Music playing,we are not support queue yet.")
         return
 
     print_info("Getting everything ready now")
@@ -148,7 +148,7 @@ async def play(ctx, url: str):
     for file in os.listdir("./"):
         if file.endswith(".mp3"):
             name = file
-            print_info("Renamed file")
+            print_info("Renamed Music file")
             os.rename(file, "song.mp3")
 
     voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: print(f"{name} has finished playing"))
