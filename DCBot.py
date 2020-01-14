@@ -157,9 +157,9 @@ async def play(ctx, url: str):
             name = file
             print_info("Renamed Audio file")
             os.rename(file, "song.mp3")
-    channel = ctx.author.voice.channel
     try:
-        await channel.connect()
+        channel = ctx.author.voice.channel
+        await channel.connect
     except Exception:
         pass
     voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: print(f"{name} has finished playing"))
@@ -178,7 +178,7 @@ async def stop(ctx):
         voice.stop()
         await ctx.send("Music Stopped")
     else:
-        await ctx.send("Music not Playing, Failed pause...")
+        await ctx.send("Music not Playing, Failed to stop...")
 
 @bot.command()
 async def np(ctx):
