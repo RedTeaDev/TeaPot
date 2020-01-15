@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import shutil
@@ -102,14 +103,15 @@ async def on_ready():
 
 @bot.event
 async def on_member_join(member):
-    print(f'{member} joined ' + member.server.name + ".")
-    print_info(f'{member} joined the server.' + member.server.name + ".")
+    print(member)
+    print(f'{member} joined the server')
+    print_info(f'{member} joined the server')
 
 
 @bot.event
 async def on_member_remove(member):
-    print(f'{member} left ' + member.server.name + ".")
-    print_info(f'{member} left ' + member.server.name + ".")
+    print(f'{member} left the server')
+    print_info(f'{member} left the server')
 
 
 @bot.event
@@ -130,6 +132,7 @@ async def on_message(message):
                 db.execute("INSERT INTO `channels`(channel_id, channel_name) VALUES(%s, %s)",
                            (message.channel.id, message.channel.name))
                 database.commit()
+            print("TEST")
             db.execute("INSERT INTO `" + str(
                 guild.id) + "_logs" + "`(timestamp, guild_id, channel_id, message_id, user_id, action_type, message) VALUES(%s, %s, %s, %s, %s, %s, %s)",
                        (redtea.time(), message.guild.id, message.channel.id, message.id, message.author.id,
@@ -145,7 +148,46 @@ async def on_message(message):
                 print("{0.author.name} : {0.content}".format(message), file=f)
         except Exception as ignore:
             print_debug(ignore)
-    await bot.process_commands(message)
+    # await bot.process_commands(message)
+
+
+@bot.event
+async def on_raw_message_edit(ctx):
+    # ANNOYING JSON GO AWAY BYE I DONT WANT TO SEE U
+    guild_id = json.loads(json.dumps(ctx.data))['guild_id']
+    channel_id = json.loads(json.dumps(ctx.data))['channel_id']
+    message_id = json.loads(json.dumps(ctx.data))['id']
+    author_id = json.loads(json.dumps(json.loads(json.dumps(ctx.data))['author']))['id']
+    content = json.loads(json.dumps(ctx.data))['content']
+    #
+    if storage_type == "mysql":
+        try:
+            db.execute("INSERT INTO `" + str(
+                guild_id) + "_logs" + "`(timestamp, guild_id, channel_id, message_id, user_id, action_type, message) VALUES(%s, %s, %s, %s, %s, %s, %s)",
+                       (redtea.time(), guild_id, channel_id, message_id, author_id,
+                        "MESSAGE_EDIT", content))
+            database.commit()
+        except Exception as e:
+            print(e)
+            print_error("Unable to record message in MySQL")
+    elif storage_type == "flatfile":
+        pass
+
+
+@bot.event
+async def on_message_delete(ctx):
+    if storage_type == "mysql":
+        try:
+            db.execute("INSERT INTO `" + str(
+                ctx.guild.id) + "_logs" + "`(timestamp, guild_id, channel_id, message_id, user_id, action_type) VALUES(%s, %s, %s, %s, %s, %s)",
+                       (redtea.time(), ctx.guild.id, ctx.channel.id, ctx.id, ctx.author.id,
+                        "MESSAGE_DELETE"))
+            database.commit()
+        except Exception as e:
+            print(e)
+            print_error("Unable to record message in MySQL")
+    elif storage_type == "flatfile":
+        pass
 
 
 @bot.command()
@@ -153,8 +195,8 @@ async def ping(ctx):
     await ctx.send(f'Pong! {round(bot.latency * 1000)} ms')  # ping
 
 
-@bot.command(aliases=['purge', 'remove', 'cls'])
-async def clear(ctx, amount=5):
+@bot.command(aliases=['clear', 'cls', 'remove'])
+async def purge(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
 
@@ -192,16 +234,6 @@ async def admin(ctx):
 
 
 @bot.command()
-async def join(ctx):
-    try:
-        channel = ctx.author.voice.channel
-        await channel.connect()
-        await ctx.send("TeaPot has joined " + channel)
-    except:
-        await ctx.send("TeaPot Already connected to a voice channel!")
-
-
-@bot.command()
 async def leave(ctx):
     await ctx.voice_client.disconnect()
 
@@ -209,6 +241,14 @@ async def leave(ctx):
 @bot.command(pass_context=True, aliases=['p'])
 # You might have to set FFMPEG to system path!
 async def play(ctx, url: str):
+    # urlt = str("".join(args))
+
+    try:
+        await ctx.send("Successfully joined " + ctx.author.voice.channel)
+        await ctx.author.voice.channel.connect()
+    except:
+        pass
+
     global nname
 
     def check_queue():
@@ -220,7 +260,7 @@ async def play(ctx, url: str):
             try:
                 first_file = os.listdir(DIR)[0]
             except:
-                print_info("No more queued song(s)")
+                print_info("Queue is empty.")
                 queues.clear()
                 return
             main_location = os.path.dirname(os.path.realpath(__file__))
@@ -281,8 +321,8 @@ async def play(ctx, url: str):
             print_info("Downloading audio now...")
             await ctx.send("Downloading... Please Wait...")
             ydl.download([url])
-    except Exception as faildownload:
-        await ctx.send("Fail to download: " + str(faildownload))
+    except Exception as e:
+        await ctx.send("Failed to download: " + str(e))
 
     for file in os.listdir("./"):
         if file.endswith(".mp3"):
@@ -290,17 +330,16 @@ async def play(ctx, url: str):
             print_info("Renamed Audio file")
             os.rename(file, "song.mp3")
     try:
-        channel = ctx.author.voice.channel
-        await channel.connect
-    except Exception:
-        pass
-    voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: check_queue())
-    voice.source = discord.PCMVolumeTransformer(voice.source)
-    voice.source.volume = 0.20
+        voice.play(discord.FFmpegPCMAudio("song.mp3"), after=lambda e: check_queue())
+        voice.source = discord.PCMVolumeTransformer(voice.source)
+        voice.source.volume = 0.25
+    except Exception as e:
+        print_error(e)
+        print(e)
 
     nname = name.rsplit("-", 2)
     await ctx.send(f"Playing: {nname}")
-    print_info(f"playing: {nname}")
+    print_info(f"Playing: {nname}")
 
 
 @bot.command(pass_context=True)
@@ -317,7 +356,35 @@ async def stop(ctx):
         await ctx.send("Music not Playing, Failed to stop...")
 
 
-@bot.command()
+@commands.command(name='pause')
+async def pause_(self, ctx):
+    """Pause the currently playing song."""
+    vc = ctx.voice_client
+
+    if not vc or not vc.is_playing():
+        return await ctx.send('I am not currently playing anything!', delete_after=20)
+    elif vc.is_paused():
+        return
+
+    vc.pause()
+    await ctx.send(f'**`{ctx.author}`**: Paused the song!')
+
+
+@commands.command(name='resume')
+async def resume_(self, ctx):
+    """Resume the currently paused song."""
+    vc = ctx.voice_client
+
+    if not vc or not vc.is_connected():
+        return await ctx.send('I am not currently playing anything!', delete_after=20)
+    elif not vc.is_paused():
+        return
+
+    vc.resume()
+    await ctx.send(f'**`{ctx.author}`**: Resumed the song!')
+
+
+@bot.command(alias='nowplaying')
 async def np(ctx):
     global nname
     await ctx.send(f"Current Playing: {nname}")
