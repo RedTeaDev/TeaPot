@@ -12,7 +12,14 @@ from discord.utils import get
 
 from redtea import redtea
 
-ready = 0
+print("""
+  _____                      _   
+ |_   _|__  __ _ _ __   ___ | |_ 
+   | |/ _ \/ _` | '_ \ / _ \| __|
+   | |  __/ (_| | |_) | (_) | |_ 
+   |_|\___|\__,_| .__/ \___/ \__|
+      by RedTea |_| & ColaIan
+""")
 
 # Check if config exists
 if not os.path.isfile('config.ini'):
@@ -47,11 +54,12 @@ if storage_type == "mysql":
         )
         db = database.cursor(buffered=True)
         print(database)
-        # db.execute('DROP TABLE IF EXISTS `servers`')
-        db.execute('CREATE TABLE IF NOT EXISTS `servers` (`id` BIGINT, `name` TINYTEXT)')
     except Exception as error:
-        print("Unable to connect to database. Aborting startup...\n" + str(error))
+        print("\nUnable to connect to database. Aborting startup...\n" + str(error))
         quit()
+    db.execute('CREATE TABLE IF NOT EXISTS `guilds` (`guild_id` BIGINT, `guild_name` TINYTEXT)')
+    db.execute('CREATE TABLE IF NOT EXISTS `channels` (`channel_id` BIGINT, `channel_name` TINYTEXT)')
+    db.execute("CREATE TABLE IF NOT EXISTS `users` (`user_id` BIGINT, `user_name` TINYTEXT, `user_discriminator` INT)")
 
 # Logger Configuration
 logging.basicConfig(level=logging.DEBUG,
@@ -78,27 +86,18 @@ bot = commands.Bot(command_prefix='/teapot ')
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online, activity=discord.Game('/teapot help | redtea.red'))
-    ready = 1
-
     if storage_type == "mysql":
         for guild in bot.guilds:
-            use_sql = True
-            db.execute("SELECT * FROM `servers` WHERE id = '" + str(guild.id) + "'")
+            db.execute("SELECT * FROM `guilds` WHERE guild_id = '" + str(guild.id) + "'")
             if db.rowcount == 0:
-                db.execute("INSERT INTO `servers`(id, name) VALUES(%s, %s)", (guild.id, guild.name))
+                db.execute("INSERT INTO `guilds`(guild_id, guild_name) VALUES(%s, %s)", (guild.id, guild.name))
                 database.commit()
+            db.execute("CREATE TABLE IF NOT EXISTS `" + str(
+                guild.id) + "_logs" + "` (`timestamp` TEXT, `guild_id` BIGINT, `channel_id` BIGINT, `message_id` BIGINT, `user_id` BIGINT, `action_type` TINYTEXT, `message` MEDIUMTEXT)")
     elif storage_type == "flatfile":
-        use_sql = False
-        print(
-            "[!] You are currently using flatfile as your storage type. It's recommended for you to use MySQL Database")
-        print_warning(
-            "[!] You are currently using flatfile as your storage type. It's recommended for you to use MySQL Database")
+        print("[!] You are currently using flatfile storage type. MySQL Database is recommended")
+        print_info(bot)
     print("Successfully connected to Discord.")
-
-    #     print(guild.id)
-    #     server_ids.append(guild.id)
-    # print(server_ids)
-    # print(bot.guilds)
 
 
 @bot.event
@@ -115,19 +114,37 @@ async def on_member_remove(member):
 
 @bot.event
 async def on_message(message):
-    print_debug(f'{message}')
-
-
-@bot.event
-async def on_message(message):
+    print_debug(message)
+    # if not message.author.bot:
+    #     await message.channel.send(message.content)
     guild = message.guild
-    try:
-        if guild:
+    if storage_type == "mysql":
+        try:
+            db.execute("SELECT * FROM `users` WHERE user_id = '" + str(message.author.id) + "'")
+            if db.rowcount == 0:
+                db.execute("INSERT INTO `users`(user_id, user_name, user_discriminator) VALUES(%s, %s, %s)",
+                           (message.author.id, message.author.name, message.author.discriminator.zfill(4)))
+                database.commit()
+            db.execute("SELECT * FROM `channels` WHERE channel_id = '" + str(message.channel.id) + "'")
+            if db.rowcount == 0:
+                db.execute("INSERT INTO `channels`(channel_id, channel_name) VALUES(%s, %s)",
+                           (message.channel.id, message.channel.name))
+                database.commit()
+            db.execute("INSERT INTO `" + str(
+                guild.id) + "_logs" + "`(timestamp, guild_id, channel_id, message_id, user_id, action_type, message) VALUES(%s, %s, %s, %s, %s, %s, %s)",
+                       (redtea.time(), message.guild.id, message.channel.id, message.id, message.author.id,
+                        "MESSAGE_SEND", message.content))
+            database.commit()
+        except Exception as e:
+            print(e)
+            print_debug(e)
+    elif storage_type == "flatfile":
+        try:
             path = "logs/{}.txt".format(guild.id)
             with open(path, 'a+') as f:
                 print("{0.author.name} : {0.content}".format(message), file=f)
-    except Exception as ignore:
-        print_debug("ignore error...")
+        except Exception as ignore:
+            print_debug(ignore)
     await bot.process_commands(message)
 
 
@@ -340,6 +357,11 @@ async def queue(ctx, url: str):
             print_info("Song added to queue")
     except Exception as faildownload:
         await ctx.send("Fail to download: " + str(faildownload))
+
+
+@bot.command()
+async def test(ctx):
+    print(ctx)
 
 
 queues = {}

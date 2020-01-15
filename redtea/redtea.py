@@ -96,8 +96,8 @@ def kill():
 
 def time():
     import time
-    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-    return
+    time_return = str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+    return time_return
 
 
 def tick():
