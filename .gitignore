@@ -103,8 +103,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# Hide Token
-Config.ini
-
-#pychream
+# JetBrains Configurations
 .idea
+
+# Config
+config.ini
+
+# Local debugging
+test
